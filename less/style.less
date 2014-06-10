@@ -1,11 +1,35 @@
-@navbarBrand : orange; //variable
-@NavBarRight : red;  //variable
 
-.navbar-default {
-		.navbar-brand{color: @navbarBrand;}
+//variable ............................................................
+@navbarBrand : #ffa500; 
+@NavBarRight :  #0000ff; 
+@NavBarRightSize : 16px;
+@myClassHeight : 60px;
+
+	.navbar-default .navbar-brand{color: @navbarBrand;}
+		
+//Functions......................................................
+@navbarBrandLigth : lighten(@navbarBrand, 40%);
+		
+//Nesting .........................................................
+
+	.navbar-right
+		{
+			.navbar-brand
+				{
+					color:@NavBarRight;
+					font-size:@NavBarRightSize;
+				}	
+		}
+
+//Mixing..........................................................
+	.rectangle(){
+		width: 500px;
+		Height: @myClassHeight;
+		background-color: @navbarBrandLigth;
 	}
-//Nesting
-.navbar-right{
-		.navbar-brand{ color:@NavBarRight;}
-		a:hover{color:@navbarBrand;}
-}
+
+	.myClass{
+		color: @NavBarRight;
+		.rectangle();
+	}
+
