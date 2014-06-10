@@ -1,0 +1,11 @@
+@navbarBrand : orange; //variable
+@NavBarRight : red;  //variable
+
+.navbar-default {
+		.navbar-brand{color: @navbarBrand;}
+	}
+//Nesting
+.navbar-right{
+		.navbar-brand{ color:@NavBarRight;}
+		a:hover{color:@navbarBrand;}
+}

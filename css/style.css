@@ -1,0 +1,9 @@
+.navbar-default .navbar-brand{
+  color: #ffa500;
+}
+.navbar-right .navbar-brand {
+  color: #ff0000;
+}
+.navbar-right a:hover {
+  color: #ffa500;
+}
